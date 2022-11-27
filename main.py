@@ -5,14 +5,13 @@ try:
 
     def draw():
         screen.fill('black')
-        pygame.draw.line(screen, 'white', (0, 0), (w, h), width=5)
-        pygame.draw.line(screen, 'white', (w, 0), (0, h), width=5)
+        pygame.draw.rect(screen, 'red', (1, 1, w - 1, h - 1))
 
     if __name__ == '__main__':
         pygame.init()
         size = width, height = w, h
         screen = pygame.display.set_mode(size)
-        pygame.display.set_caption('крест')
+        pygame.display.set_caption('прямоугольник')
 
         while pygame.event.wait().type != pygame.QUIT:
             draw()
